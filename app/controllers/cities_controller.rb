@@ -7,5 +7,9 @@ class CitiesController < ApplicationController
     }
   end
 
+  def weather 
+    
+  end
+
 
 end

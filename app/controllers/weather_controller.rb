@@ -3,5 +3,5 @@ class WeatherController < ApplicationController
     
   end
 
-  def
+  
 end
