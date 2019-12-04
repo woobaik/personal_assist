@@ -1,14 +1,14 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
-const WeatherSearch = () => {
+const WeatherSearch = props => {
   return (
     <div>
-      <label for='weatherSearch'>Search</label>
+      <label htmlFor='weatherSearch'>Search</label>
       <input
-        onChange={}
         name='name'
         id='weatherSearch'
         placeholder='San Francisco, New York, etc'
+        onChange={props.handleChange}
       ></input>
     </div>
   )

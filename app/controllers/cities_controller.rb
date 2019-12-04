@@ -1,6 +1,7 @@
 class CitiesController < ApplicationController
   def search
-    @cities = City.search_all_city_with_country(params[:city_name], params[:country_name])
+    
+    @cities = City.where("lower(name) LIKE ?", "#{params[:city].downcase}%").limit(20)
     render json: {
       cities: @cities
     }
